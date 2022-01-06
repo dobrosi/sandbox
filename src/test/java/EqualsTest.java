@@ -25,4 +25,12 @@ public class EqualsTest {
     assertFalse(Long.valueOf(128).equals(128));
     assertTrue(Long.valueOf(128).equals((long) 128));
   }
+
+  @Test
+  void testString() {
+    assertTrue("test"  == "test");
+    assertFalse("test" == new String("test"));
+    assertFalse(new String("test") == new String("test"));
+    assertTrue(new String("test").equals("test"));
+  }
 }
